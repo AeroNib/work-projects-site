@@ -23,6 +23,7 @@ body {
     color: var(--color-text);
     font-family: "Noto Sans", Arial, sans-serif;
     line-height: 1.6;
+    font-weight: 600;
 }
 
 h1,
@@ -120,6 +121,7 @@ main.project-page {
     height: auto;
     display: block;
     margin: 10px auto;
+    border-radius: 25px;
 }
 
 .hero-image {
@@ -159,7 +161,6 @@ main.project-page {
 
 .project-description {
     text-align: left;
-    margin-bottom: 15px;
 }
 
 .project-circle {
@@ -190,23 +191,43 @@ main.project-page {
     text-decoration: none;
 }
 
-.gallery > a img {
+.gallery > a > img {
     height: 100%;
     width: auto;
     display: block;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 .gallery > a:hover img {
     opacity: 0.9;
 }
 
-.gallery p {
-    padding: 10px 15px;
-    border: 2px solid var(--color-accent-1);
-    background-color: color-mix(in srgb, var(--color-accent-1) 20%, white);
+/* Info Box Styles */
+.info-box-link {
+    height: 200px;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.info-box-link:hover {
+    opacity: 0.9;
+}
+
+.info-box {
+    padding: 20px 25px;
+    background-color: var(--color-accent-1);
     max-width: 320px;
-    text-align: left;
+    height: 100%;
+    font-weight: 800;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 .border-accent-1 {

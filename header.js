@@ -16,10 +16,10 @@
             </a>
             <nav class="nav-circles">
                 <a href="/" class="nav-circle" aria-label="Home">
-                    <img src="${basePath}icons/back.svg" alt="" class="nav-icon" />
+                    <img src="${basePath}icons/home.svg" alt="" class="nav-icon" />
                 </a>
                 <a href="https://www.aeronib.com/" class="nav-circle" aria-label="Main Site">
-                    <img src="${basePath}icons/home.svg" alt="" class="nav-icon" />
+                    <img src="${basePath}icons/navigation.svg" alt="" class="nav-icon" />
                 </a>
                 <a href="https://www.linkedin.com/in/cfriedenberger/" class="nav-circle" aria-label="LinkedIn">
                     <img src="${basePath}icons/ln.svg" alt="" class="nav-icon" />

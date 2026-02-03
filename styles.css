@@ -1,0 +1,247 @@
+/* Google Fonts Import */
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Noto+Sans:wght@400&display=swap");
+
+/* Color Constants */
+:root {
+    --color-bg: #fcf4da; /* Tan - Background */
+    --color-text: #333333; /* Gray - Main content text */
+    --color-accent-1: #277a8c; /* Teal - Main accent */
+    --color-accent-2: #f3c52e; /* Yellow - Secondary accent */
+    --color-accent-3: #886289; /* Purple - Tertiary accent */
+    --color-accent-4: #94ad48; /* Green - Quaternary accent */
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: "Noto Sans", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Luckiest Guy", "Arial Black", sans-serif;
+    font-weight: 400;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    width: 100%;
+}
+
+.logo-link {
+    display: block;
+    text-decoration: none;
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+    display: block;
+}
+
+/* Navigation Circles */
+.nav-circles {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease;
+}
+
+.nav-circle:nth-of-type(1) {
+    background-color: var(--color-accent-1);
+}
+
+.nav-circle:nth-of-type(2) {
+    background-color: var(--color-accent-2);
+}
+
+.nav-circle:nth-of-type(3) {
+    background-color: var(--color-accent-3);
+}
+
+.nav-circle:nth-of-type(4) {
+    background-color: var(--color-accent-4);
+}
+
+.nav-circle:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+.nav-icon {
+    width: 28px;
+    height: 28px;
+    display: block;
+}
+
+/* Main Content */
+main {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Project Page Styles */
+main.project-page {
+    max-width: 1050px;
+}
+
+.project-image {
+    max-width: 100%;
+    max-height: 900px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+.hero-image {
+    margin: 0 auto;
+    box-shadow:
+        8px 8px 0px var(--color-accent-3),
+        16px 16px 0px color-mix(in srgb, var(--color-accent-3) 20%, transparent);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.project-title-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.project-title {
+    text-align: left;
+    font-size: 2em;
+    font-weight: normal;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.project-year {
+    text-align: right;
+    font-size: 2em;
+    font-weight: normal;
+}
+
+.project-description {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.project-circle {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    margin: 0 10px;
+}
+
+.project-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Gallery Grid Styles */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.gallery > a {
+    display: block;
+    height: 200px;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.gallery > a img {
+    height: 100%;
+    width: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.gallery > a:hover img {
+    opacity: 0.9;
+}
+
+.gallery p {
+    padding: 10px 15px;
+    border: 2px solid var(--color-accent-1);
+    background-color: color-mix(in srgb, var(--color-accent-1) 20%, white);
+    max-width: 320px;
+    text-align: left;
+}
+
+.border-accent-1 {
+    border: 2px solid var(--color-accent-1);
+}
+
+.border-accent-2 {
+    border: 2px solid var(--color-accent-2);
+}
+
+.border-accent-3 {
+    border: 2px solid var(--color-accent-3);
+}
+
+.border-accent-4 {
+    border: 2px solid var(--color-accent-4);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    .logo {
+        height: 45px;
+    }
+
+    .nav-circle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .nav-icon {
+        width: 22px;
+        height: 22px;
+    }
+}

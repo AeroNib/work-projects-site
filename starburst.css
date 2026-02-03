@@ -1,0 +1,274 @@
+/* Starburst Animation Component */
+/* Mid-century modern / atomic age styled starburst with lollipop rays */
+
+.starburst {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 50px auto;
+}
+
+/* Center circle */
+.starburst::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background: var(--color-accent-1, #277a8c);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+/* Individual rays */
+.starburst-ray {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 2px;
+    background: var(--color-accent-1, #277a8c);
+    transform-origin: center center;
+}
+
+/* Circle at left end of ray */
+.starburst-ray::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+/* Circle at right end of ray */
+.starburst-ray::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+/* Position rays in a circle - 8 rays at 45° intervals with varied lengths */
+.starburst-ray:nth-child(1) {
+    transform: rotate(0deg);
+    width: 180px;
+    margin-left: -90px;
+}
+
+.starburst-ray:nth-child(2) {
+    transform: rotate(45deg);
+    width: 140px;
+    margin-left: -70px;
+}
+
+.starburst-ray:nth-child(3) {
+    transform: rotate(90deg);
+    width: 200px;
+    margin-left: -100px;
+}
+
+.starburst-ray:nth-child(4) {
+    transform: rotate(135deg);
+    width: 120px;
+    margin-left: -60px;
+}
+
+.starburst-ray:nth-child(5) {
+    transform: rotate(180deg);
+    width: 170px;
+    margin-left: -85px;
+}
+
+.starburst-ray:nth-child(6) {
+    transform: rotate(225deg);
+    width: 190px;
+    margin-left: -95px;
+}
+
+.starburst-ray:nth-child(7) {
+    transform: rotate(270deg);
+    width: 130px;
+    margin-left: -65px;
+}
+
+.starburst-ray:nth-child(8) {
+    transform: rotate(315deg);
+    width: 160px;
+    margin-left: -80px;
+}
+
+/* Alternate colors and sizes for variety using the site's color palette */
+.starburst-ray:nth-child(1)::before {
+    background: var(--color-accent-2, #f3c52e); /* Yellow */
+    width: 20px;
+    height: 20px;
+    left: -10px;
+}
+.starburst-ray:nth-child(1)::after {
+    background: var(--color-accent-3, #886289); /* Purple */
+    width: 14px;
+    height: 14px;
+    right: -7px;
+}
+
+.starburst-ray:nth-child(2)::before {
+    background: var(--color-accent-4, #94ad48); /* Green */
+    width: 12px;
+    height: 12px;
+    left: -6px;
+}
+.starburst-ray:nth-child(2)::after {
+    background: var(--color-accent-2, #f3c52e); /* Yellow */
+    width: 18px;
+    height: 18px;
+    right: -9px;
+}
+
+.starburst-ray:nth-child(3)::before {
+    background: var(--color-accent-3, #886289); /* Purple */
+    width: 16px;
+    height: 16px;
+    left: -8px;
+}
+.starburst-ray:nth-child(3)::after {
+    background: var(--color-accent-4, #94ad48); /* Green */
+    width: 22px;
+    height: 22px;
+    right: -11px;
+}
+
+.starburst-ray:nth-child(4)::before {
+    background: var(--color-accent-2, #f3c52e); /* Yellow */
+    width: 14px;
+    height: 14px;
+    left: -7px;
+}
+.starburst-ray:nth-child(4)::after {
+    background: var(--color-accent-3, #886289); /* Purple */
+    width: 16px;
+    height: 16px;
+    right: -8px;
+}
+
+.starburst-ray:nth-child(5)::before {
+    background: var(--color-accent-4, #94ad48); /* Green */
+    width: 18px;
+    height: 18px;
+    left: -9px;
+}
+.starburst-ray:nth-child(5)::after {
+    background: var(--color-accent-2, #f3c52e); /* Yellow */
+    width: 12px;
+    height: 12px;
+    right: -6px;
+}
+
+.starburst-ray:nth-child(6)::before {
+    background: var(--color-accent-3, #886289); /* Purple */
+    width: 20px;
+    height: 20px;
+    left: -10px;
+}
+.starburst-ray:nth-child(6)::after {
+    background: var(--color-accent-4, #94ad48); /* Green */
+    width: 14px;
+    height: 14px;
+    right: -7px;
+}
+
+.starburst-ray:nth-child(7)::before {
+    background: var(--color-accent-2, #f3c52e); /* Yellow */
+    width: 16px;
+    height: 16px;
+    left: -8px;
+}
+.starburst-ray:nth-child(7)::after {
+    background: var(--color-accent-3, #886289); /* Purple */
+    width: 20px;
+    height: 20px;
+    right: -10px;
+}
+
+.starburst-ray:nth-child(8)::before {
+    background: var(--color-accent-4, #94ad48); /* Green */
+    width: 14px;
+    height: 14px;
+    left: -7px;
+}
+.starburst-ray:nth-child(8)::after {
+    background: var(--color-accent-2, #f3c52e); /* Yellow */
+    width: 18px;
+    height: 18px;
+    right: -9px;
+}
+
+/* Animation */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+/* Apply animations when .animated class is present */
+.starburst.animated .starburst-ray {
+    animation: rotate 20s linear infinite;
+    /* Preserve initial rotation angles while animating */
+}
+
+.starburst.animated .starburst-ray:nth-child(1) {
+    animation: rotate 20s linear infinite;
+}
+
+.starburst.animated .starburst-ray:nth-child(2) {
+    animation: rotate 20s linear infinite;
+    animation-delay: -2.5s;
+}
+
+.starburst.animated .starburst-ray:nth-child(3) {
+    animation: rotate 20s linear infinite;
+    animation-delay: -5s;
+}
+
+.starburst.animated .starburst-ray:nth-child(4) {
+    animation: rotate 20s linear infinite;
+    animation-delay: -7.5s;
+}
+
+.starburst.animated .starburst-ray:nth-child(5) {
+    animation: rotate 20s linear infinite;
+    animation-delay: -10s;
+}
+
+.starburst.animated .starburst-ray:nth-child(6) {
+    animation: rotate 20s linear infinite;
+    animation-delay: -12.5s;
+}
+
+.starburst.animated .starburst-ray:nth-child(7) {
+    animation: rotate 20s linear infinite;
+    animation-delay: -15s;
+}
+
+.starburst.animated .starburst-ray:nth-child(8) {
+    animation: rotate 20s linear infinite;
+    animation-delay: -17.5s;
+}
+
+.starburst.animated::before {
+    animation: pulse 2s ease-in-out infinite;
+}

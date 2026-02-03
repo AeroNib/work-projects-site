@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>404 - Page Not Found | Chomp Workshop</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="starburst.css" />
+        <style>
+            .error-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 60vh;
+                text-align: center;
+                padding: 40px 20px;
+            }
+
+            .error-title {
+                font-size: 4em;
+                margin-bottom: 20px;
+                color: var(--color-accent-1);
+            }
+
+            .error-message {
+                font-size: 1.5em;
+                margin-bottom: 30px;
+                max-width: 600px;
+            }
+
+            .error-link {
+                display: inline-block;
+                padding: 12px 30px;
+                background-color: var(--color-accent-1);
+                color: var(--color-bg);
+                text-decoration: none;
+                border-radius: 25px;
+                font-weight: bold;
+                transition:
+                    background-color 0.3s ease,
+                    transform 0.2s ease;
+            }
+
+            .error-link:hover {
+                background-color: var(--color-accent-2);
+                color: var(--color-text);
+                transform: scale(1.05);
+            }
+
+            @media (max-width: 768px) {
+                .error-title {
+                    font-size: 3em;
+                }
+
+                .error-message {
+                    font-size: 1.2em;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <script src="header.js"></script>
+
+        <main>
+            <div class="error-container">
+                <div class="starburst animated">
+                    <span class="starburst-ray"></span>
+                    <span class="starburst-ray"></span>
+                    <span class="starburst-ray"></span>
+                    <span class="starburst-ray"></span>
+                </div>
+
+                <h1 class="error-title">404</h1>
+                <p class="error-message">
+                    Oops! This page seems to have wandered off.
+                </p>
+                <a href="/" class="error-link">Return to Gallery</a>
+            </div>
+        </main>
+    </body>
+</html>

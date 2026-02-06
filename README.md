@@ -1,6 +1,6 @@
-# Chomp Workshop Project Site
+# Work Projects Site
 
-This site is a visual catalog of various personal creative projects I've worked on.
+This site is a visual catalog of various work projects I've been involved with.
 
 It's a static site built with HTML and CSS and minimal JavaScript to accomplish some things like serving dynamic navigation links. The site structure is simple and designed around reuse.
 
